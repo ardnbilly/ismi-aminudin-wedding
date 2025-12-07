@@ -18,7 +18,7 @@
         <title></title>
     </head>
     <body>
-        <audio id="bg-music" src="./song/song1.mp3" autoplay></audio>
+        <audio id="bg-music" src="./song/song1.mp3" loop></audio>
         <div class="hero-section">
             <div class="text-content">
                 <p class="heading reveal">
@@ -189,16 +189,21 @@
 
             document.addEventListener("DOMContentLoaded", function () {
                 const audio = document.getElementById("bg-music");
+                let started = false;
 
-                // coba autoplay langsung
-                audio.play().catch(() => {
-                    // trik autoplay paksa: set muted, play, lalu unmute
-                    audio.muted = true;
-                    audio.play().then(() => {
-                        setTimeout(() => {
-                            audio.muted = false;
-                        }, 500);
-                    });
+                function startMusic() {
+                    if (!started) {
+                        audio.play().catch(() => {});
+                        started = true;
+                    }
+                }
+
+                // play pada scroll pertama
+                window.addEventListener("scroll", startMusic, { once: true });
+
+                // jaga-jaga: play juga jika user menyentuh layar (mobile)
+                window.addEventListener("touchstart", startMusic, {
+                    once: true
                 });
             });
         </script>
