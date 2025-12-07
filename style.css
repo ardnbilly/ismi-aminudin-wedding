@@ -1,0 +1,290 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+}
+
+@font-face {
+    font-family: "Citadel";
+    src:
+        url("./fonts/CitadelScriptStd.otf") format("embedded-opentype"),
+        url("./fonts/CitadelScriptStd.otf") format("woff2"),
+        url("./fonts/CitadelScriptStd.otf") format("woff"),
+        url("./fonts/CitadelScriptStd.otf") format("truetype"),
+        url("./fonts/CitadelScriptStd.otf") format("svg");
+}
+
+.hero-section .name {
+    font-family: Citadel;
+    font-size: 70px;
+    padding-top: 12px;
+    padding-bottom: 8px;
+}
+
+.hero-section {
+    font-family: "Playfair Display", serif;
+    background-image: url(./assets/bg-hero-section.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: relative;
+    color: #2e354e;
+    /* menjaga rasio background tetap proporsional */
+    aspect-ratio: 9 / 16;
+    width: 100%;
+    overflow: hidden;
+}
+
+.text-content {
+    text-align: center;
+    padding-top: 90px;
+}
+
+.character {
+    position: absolute;
+    bottom: -60px;
+    width: auto;
+    max-width: 100%; /* bisa atur sesuka */
+}
+
+.section2 {
+    background-image: url(./assets/bg-2.webp);
+    background-size: cover;
+    background-repeat: no-repeat;
+    /* menjaga rasio background tetap proporsional */
+    aspect-ratio: 9 / 16;
+    width: 100%;
+    overflow: hidden;
+}
+
+.section2-wrapper {
+    color: #2e354e;
+    font-family: "Playfair Display", serif;
+    text-align: center;
+    padding: 30px;
+}
+
+.surah {
+    padding-top: 60px;
+    font-size: 24px;
+}
+
+.ayat-surah {
+    font-family: "Montserrat", sans-serif;
+    font-size: 20px;
+    padding-top: 20px;
+}
+
+.terjemahan {
+    font-size: 12px;
+    padding-top: 20px;
+}
+
+.section3 {
+    background-image: url(./assets/bg-3.webp);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center bottom;
+    /* menjaga rasio background tetap proporsional */
+    aspect-ratio: 9 / 16;
+    width: 100%;
+    overflow: hidden;
+}
+
+.section3-wrapper {
+    color: #2e354e;
+    font-family: "Playfair Display", serif;
+    text-align: center;
+    padding: 40px;
+}
+
+.pembuka {
+    padding-top: 70px;
+    padding-bottom: 20px;
+    text-wrap: pretty;
+    font-size: 12px;
+}
+
+.nama-mempelai {
+    font-size: 50px;
+    line-height: 1;
+    padding-bottom: 8px;
+}
+
+.dan {
+    font-family: "Montserrat", sans-serif;
+    font-size: 70px;
+    padding-top: 12px;
+}
+
+.section4 {
+    background-image: url(./assets/bg-3.webp);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    /* menjaga rasio background tetap proporsional */
+    aspect-ratio: 9 / 16;
+    width: 100%;
+    overflow: hidden;
+}
+
+.section4-wrapper {
+    font-family: "Playfair Display", serif;
+    text-align: center;
+    line-height: 1;
+    font-size: 20px;
+}
+
+.judul-akad {
+    padding-top: 200px;
+    font-size: 32px;
+    margin-bottom: 22px;
+}
+
+.judul-akad span {
+    font-family: "Montserrat", sans-serif;
+}
+
+.jadwal,
+.waktu {
+    margin-bottom: 20px;
+}
+
+.lokasi {
+    margin-bottom: 32px;
+}
+
+.maps {
+    font-family: "Montserrat", sans-serif;
+    text-decoration: none;
+    text-decoration: none;
+    background-color: #2e354e;
+    color: white;
+    padding: 8px 16px;
+    border-radius: 14px;
+    font-size: 14px;
+}
+
+.section5 {
+    background-image: url(./assets/bg-2.webp);
+    background-size: cover;
+    background-repeat: no-repeat;
+    /* menjaga rasio background tetap proporsional */
+    aspect-ratio: 9 / 16;
+    width: 100%;
+    overflow: hidden;
+}
+
+.section5-wrapper {
+    font-family: "Playfair Display", serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    line-height: 1;
+    text-align: center;
+    gap: 18px;
+    padding: 24px;
+}
+
+.bank-logo {
+    width: 35px;
+}
+
+.wrap-bank {
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 6px;
+    border-radius: 4px;
+}
+
+.chip-logo {
+    width: 30px;
+}
+
+.card {
+    color: white;
+    text-align: left;
+    padding: 12px;
+    background-color: #2e354e;
+    font-family: "Montserrat", sans-serif;
+    width: max-content;
+    border-radius: 8px;
+    font-size: 14px;
+}
+
+.chip {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 4px;
+}
+
+.bank,
+.norek {
+    margin-bottom: 4px;
+}
+
+.atas-nama {
+    font-size: 12px;
+}
+
+.salin {
+    border-style: none;
+    background-color: #fbc83a;
+    color: black;
+    padding: 4px 14px;
+    border-radius: 8px;
+    font-size: 12px;
+    margin-bottom: 6px;
+    margin-top: 2px;
+}
+
+.wedding-gift {
+    font-size: 24px;
+    margin-top: 80px;
+}
+
+.wedding-text {
+    font-size: 8px;
+    text-wrap: pretty;
+}
+
+/* --- ANIMASI SCROLL (REVEAL) --- */
+
+/* kondisi awal */
+.reveal {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: all 2s ease-out;
+}
+
+/* aktif ketika masuk viewport */
+.reveal.active {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* variasi efek */
+
+/* Fade dari kiri */
+.reveal.fade-left {
+    transform: translateX(-40px);
+}
+.reveal.fade-left.active {
+    transform: translateX(0);
+}
+
+/* Fade dari kanan */
+.reveal.fade-right {
+    transform: translateX(40px);
+}
+.reveal.fade-right.active {
+    transform: translateX(0);
+}
+
+/* Zoom */
+.reveal.zoom {
+    transform: scale(0.85);
+}
+.reveal.zoom.active {
+    transform: scale(1);
+}
