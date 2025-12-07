@@ -21,7 +21,6 @@
         <audio
             id="bg-music"
             src="https://audio.jukehost.co.uk/TRbzwVF4ue5Zoluo8Uqn7fv6o5DoOeHq"
-            loop
         ></audio>
         <div class="hero-section">
             <div class="text-content">
@@ -191,25 +190,21 @@
                 });
             });
 
-            document.addEventListener("DOMContentLoaded", function () {
-                const audio = document.getElementById("bg-music");
-                let started = false;
+            const audio = document.getElementById("bg-music");
+            audio.loop = false;
 
-                function startMusic() {
-                    if (!started) {
-                        audio.play().catch(() => {});
-                        started = true;
-                    }
-                }
-
-                // play pada scroll pertama
-                window.addEventListener("scroll", startMusic, { once: true });
-
-                // jaga-jaga: play juga jika user menyentuh layar (mobile)
-                window.addEventListener("touchstart", startMusic, {
-                    once: true
+            function playMusicOnce() {
+                audio.play().catch(err => {
+                    console.log("Autoplay blocked:", err);
                 });
-            });
+                // tidak perlu lagi trigger
+                window.removeEventListener("scroll", playMusicOnce);
+                window.removeEventListener("click", playMusicOnce);
+            }
+
+            // trigger pertama kali user interaksi
+            window.addEventListener("scroll", playMusicOnce, { once: true });
+            window.addEventListener("click", playMusicOnce, { once: true });
         </script>
     </body>
 </html>
