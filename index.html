@@ -18,7 +18,7 @@
         <title></title>
     </head>
     <body>
-        <audio id="bg-music" muted>
+        <audio id="bg-music">
             <source
                 src="https://audio.jukehost.co.uk/TRbzwVF4ue5Zoluo8Uqn7fv6o5DoOeHq"
                 type="audio/mpeg"
@@ -193,33 +193,31 @@
                 });
             });
 
-const audio = document.getElementById("bg-music");
+            const audio = document.getElementById("bg-music");
     audio.loop = true;
 
-    // Reset posisi audio ke awal SETIAP halaman di-load
+    // Reset audio setiap kali halaman load
     window.addEventListener("load", () => {
+        audio.pause();
         audio.currentTime = 0;
-        audio.muted = true;        // wajib muted untuk autoplay-safe
-        audio.pause();             // pastikan tidak play otomatis
     });
 
+    // Gesture untuk mulai
     function startAudio() {
-        audio.currentTime = 0;     // mulai ulang dari awal
-        audio.muted = false;       // unmute setelah gesture user
-
+        audio.currentTime = 0;  // mulai dari awal
         audio.play()
             .then(() => {
-                console.log("Audio started from beginning");
+                console.log("Audio started");
             })
             .catch(err => {
-                console.warn("Blocked:", err);
+                console.warn("Audio blocked:", err);
             });
-
+        
         window.removeEventListener("click", startAudio);
         window.removeEventListener("touchstart", startAudio);
     }
 
-    // Gesture valid
+    // Gesture VALID
     window.addEventListener("click", startAudio);
     window.addEventListener("touchstart", startAudio);
         </script>
