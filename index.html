@@ -18,10 +18,13 @@
         <title></title>
     </head>
     <body>
-        <audio
-            id="bg-music"
-            src="song1.mp3"
-        ></audio>
+        <audio id="bg-music" muted>
+            <source
+                src="https://audio.jukehost.co.uk/TRbzwVF4ue5Zoluo8Uqn7fv6o5DoOeHq"
+                type="audio/mpeg"
+            />
+        </audio>
+
         <div class="hero-section">
             <div class="text-content">
                 <p class="heading reveal">
@@ -190,26 +193,33 @@
                 });
             });
 
-            const audio = document.getElementById("bg-music");
+const audio = document.getElementById("bg-music");
     audio.loop = true;
 
-    function playMusicOnce() {
+    // coba load dulu supaya tidak error ketika unmute
+    audio.load();
+
+    function enableAudio() {
+        // unmute
+        audio.muted = false;
+
+        // play dengan promise handling
         audio.play()
             .then(() => {
-                console.log("Music is playing");
+                console.log("Audio playing successfully");
             })
             .catch(err => {
-                console.log("Playback blocked:", err);
+                console.log("Still blocked:", err);
             });
 
-        // Hanya jalankan sekali
-        window.removeEventListener("click", playMusicOnce);
-        window.removeEventListener("touchstart", playMusicOnce);
+        // hanya sekali
+        window.removeEventListener("click", enableAudio);
+        window.removeEventListener("touchstart", enableAudio);
     }
 
-    // User gesture yang valid (scroll tidak valid di mobile browser)
-    window.addEventListener("click", playMusicOnce, { once: true });
-    window.addEventListener("touchstart", playMusicOnce, { once: true });
+    // gesture VALID untuk autoplay policy
+    window.addEventListener("click", enableAudio, { once: true });
+    window.addEventListener("touchstart", enableAudio, { once: true });
         </script>
     </body>
 </html>
