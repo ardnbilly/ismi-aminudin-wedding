@@ -191,20 +191,25 @@
             });
 
             const audio = document.getElementById("bg-music");
-            audio.loop = false;
+    audio.loop = true;
 
-            function playMusicOnce() {
-                audio.play().catch(err => {
-                    console.log("Autoplay blocked:", err);
-                });
-                // tidak perlu lagi trigger
-                window.removeEventListener("scroll", playMusicOnce);
-                window.removeEventListener("click", playMusicOnce);
-            }
+    function playMusicOnce() {
+        audio.play()
+            .then(() => {
+                console.log("Music is playing");
+            })
+            .catch(err => {
+                console.log("Playback blocked:", err);
+            });
 
-            // trigger pertama kali user interaksi
-            window.addEventListener("scroll", playMusicOnce, { once: true });
-            window.addEventListener("click", playMusicOnce, { once: true });
+        // Hanya jalankan sekali
+        window.removeEventListener("click", playMusicOnce);
+        window.removeEventListener("touchstart", playMusicOnce);
+    }
+
+    // User gesture yang valid (scroll tidak valid di mobile browser)
+    window.addEventListener("click", playMusicOnce, { once: true });
+    window.addEventListener("touchstart", playMusicOnce, { once: true });
         </script>
     </body>
 </html>
