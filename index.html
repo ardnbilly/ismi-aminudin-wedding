@@ -25,126 +25,148 @@
             />
         </audio>
 
-        <div class="hero-section">
-            <div class="text-content">
-                <p class="heading reveal">
-                    You Are Invited To<br />The Wedding Of
-                </p>
-                <p class="name reveal">Udin & Ismi</p>
-                <p class="date reveal">Kamis, 18 Desember 2025</p>
-            </div>
-            <img
-                src="./assets/char-wedding.png"
-                alt=""
-                class="character reveal"
-            />
+        <div class="hero-intro" id="intro-screen">
+            <p class="intro-heading">You Are Invited To<br />The Wedding Of</p>
+            <p class="intro-names">Udin & Ismi</p>
+            <p class="intro-date">Kamis, 18 Desember 2025</p>
+            <button class="btn-open-invite" id="openInvitation">
+                Buka Undangan
+            </button>
         </div>
-        <div class="section2">
-            <div class="section2-wrapper">
-                <p class="surah reveal fade-left">QS. Ar-Rum : 21</p>
-                <p class="ayat-surah reveal fade-right">
-                    وَمِنْ اٰيٰتِهٖۤ اَنْ خَلَقَ لَكُمْ مِّنْ اَنْفُسِكُمْ
-                    اَزْوَاجًا لِّتَسْكُنُوْۤا اِلَيْهَا وَجَعَلَ بَيْنَكُمْ
-                    مَّوَدَّةً وَّرَحْمَةًۗاِنَّ فِىْ ذٰلِكَ لَاٰيٰتٍ لِّقَوْمٍ
-                    يَّتَفَكَّرُوْنَ
-                </p>
-                <p class="terjemahan reveal fade-left">
-                    Dan di antara tanda-tanda (kebesaran)-Nya ialah Dia
-                    menciptakan pasangan-pasangan untukmu dari jenismu sendiri,
-                    agar kamu cenderung dan merasa tenteram kepadanya, dan Dia
-                    menjadikan di antaramu rasa kasih dan sayang. Sungguh, pada
-                    yang demikian itu benar-benar terdapat tanda-tanda
-                    (kebesaran Allah) bagi kaum yang berpikir.
-                </p>
-            </div>
-        </div>
-        <div class="section3">
-            <div class="section3-wrapper">
-                <p class="pembuka reveal zoom">
-                    Dengan Memohon Rahmat Dan Ridho Dari Allah SWT. Kami
-                    Bermaksud Menyelenggarakan Syukuran Pernikahan Putra Putri
-                    Kami
-                </p>
-                <p class="nama-mempelai reveal fade-left">Aminudin</p>
-                <p class="nama-ortu reveal fade-left">
-                    Putra kedua dari :<br />
-                    Bapak Misran dan Ibu Sukir
-                </p>
-                <p class="dan reveal zoom">&</p>
-                <p class="nama-mempelai reveal fade-right">
-                    Oktavina Ismi Fatmajati
-                </p>
-                <p class="nama-ortu reveal fade-right">
-                    Putri keempat dari :<br />
-                    Bapak Dja'i dan Ibu Suharyati
-                </p>
-            </div>
-        </div>
-        <div class="section4">
-            <div class="section4-wrapper">
-                <p class="judul-akad reveal zoom">
-                    Akad Nikah <span>&</span> Resepsi
-                </p>
-                <p class="jadwal reveal">Kamis, 18 Desember 2025</p>
-                <p class="waktu reveal">Pukul : 10.30 WIB s/d selesai</p>
-                <p class="lokasi reveal">
-                    Lokasi :<br />Kediaman mempelai wanita<br />Jinggotan RT 05
-                    RW 02
-                </p>
-                <a
-                    href="https://maps.app.goo.gl/tfFw4W5XUK5frGyHA?g_st=ac"
-                    class="maps reveal zoom"
-                    >Buka Google Maps</a
-                >
-            </div>
-        </div>
-        <div class="section5">
-            <div class="section5-wrapper">
-                <p class="wedding-gift reveal zoom">Wedding Gift</p>
-                <p class="gift-text reveal fade-left">
-                    Kehadiran dan Doa restu Bapak/Ibu/Sdr/I merupakan karunia
-                    yang sangat berarti bagi kami. Namun jika memberi adalah
-                    tanda kasih dari anda, anda dapat memberikannya secara
-                    cashless melalui rekening dibawah ini. Terimakasih.
-                </p>
-                <div class="card reveal fade-right">
-                    <p class="bank">Bank BCA</p>
-                    <div class="chip">
-                        <img src="./assets/chip.png" alt="" class="chip-logo" />
-                        <div class="wrap-bank">
-                            <img
-                                src="./assets/bca.svg"
-                                alt="Bca Logo"
-                                class="bank-logo"
-                            />
-                        </div>
-                    </div>
-                    <p class="norek">2470757330</p>
-                    <button class="salin" data-norek="2470757330">
-                        Salin Rekening
-                    </button>
-                    <p class="atas-nama">a.n Oktavina Ismi Fatmajati</p>
+
+        <div id="main-content">
+            <div class="hero-section">
+                <div class="text-content">
+                    <p class="heading reveal">
+                        You Are Invited To<br />The Wedding Of
+                    </p>
+                    <p class="name reveal">Udin & Ismi</p>
+                    <p class="date reveal">Kamis, 18 Desember 2025</p>
                 </div>
-                <div class="card reveal fade-left">
-                    <p class="bank">Seabank</p>
-                    <div class="chip">
-                        <img src="./assets/chip.png" alt="" class="chip-logo" />
-                        <div class="wrap-bank">
-                            <img
-                                src="./assets/seabank.svg"
-                                alt="Seabank Logo"
-                                class="bank-logo"
-                            />
-                        </div>
-                    </div>
-                    <p class="norek">901275545697</p>
-                    <button class="salin" data-norek="901275545697">
-                        Salin Rekening
-                    </button>
-                    <p class="atas-nama">a.n Oktavina Ismi Fatmajati</p>
+                <img
+                    src="./assets/char-wedding.png"
+                    alt=""
+                    class="character reveal"
+                />
+            </div>
+            <div class="section2">
+                <div class="section2-wrapper">
+                    <p class="surah reveal fade-left">QS. Ar-Rum : 21</p>
+                    <p class="ayat-surah reveal fade-right">
+                        وَمِنْ اٰيٰتِهٖۤ اَنْ خَلَقَ لَكُمْ مِّنْ اَنْفُسِكُمْ
+                        اَزْوَاجًا لِّتَسْكُنُوْۤا اِلَيْهَا وَجَعَلَ بَيْنَكُمْ
+                        مَّوَدَّةً وَّرَحْمَةًۗاِنَّ فِىْ ذٰلِكَ لَاٰيٰتٍ
+                        لِّقَوْمٍ يَّتَفَكَّرُوْنَ
+                    </p>
+                    <p class="terjemahan reveal fade-left">
+                        Dan di antara tanda-tanda (kebesaran)-Nya ialah Dia
+                        menciptakan pasangan-pasangan untukmu dari jenismu
+                        sendiri, agar kamu cenderung dan merasa tenteram
+                        kepadanya, dan Dia menjadikan di antaramu rasa kasih dan
+                        sayang. Sungguh, pada yang demikian itu benar-benar
+                        terdapat tanda-tanda (kebesaran Allah) bagi kaum yang
+                        berpikir.
+                    </p>
                 </div>
             </div>
+            <div class="section3">
+                <div class="section3-wrapper">
+                    <p class="pembuka reveal zoom">
+                        Dengan Memohon Rahmat Dan Ridho Dari Allah SWT. Kami
+                        Bermaksud Menyelenggarakan Syukuran Pernikahan Putra
+                        Putri Kami
+                    </p>
+                    <p class="nama-mempelai reveal fade-left">Aminudin</p>
+                    <p class="nama-ortu reveal fade-left">
+                        Putra kedua dari :<br />
+                        Bapak Misran dan Ibu Sukir
+                    </p>
+                    <p class="dan reveal zoom">&</p>
+                    <p class="nama-mempelai reveal fade-right">
+                        Oktavina Ismi Fatmajati
+                    </p>
+                    <p class="nama-ortu reveal fade-right">
+                        Putri keempat dari :<br />
+                        Bapak Dja'i dan Ibu Suharyati
+                    </p>
+                </div>
+            </div>
+            <div class="section4">
+                <div class="section4-wrapper">
+                    <p class="judul-akad reveal zoom">
+                        Akad Nikah <span>&</span> Resepsi
+                    </p>
+                    <p class="jadwal reveal">Kamis, 18 Desember 2025</p>
+                    <p class="waktu reveal">Pukul : 10.30 WIB s/d selesai</p>
+                    <p class="lokasi reveal">
+                        Lokasi :<br />Kediaman mempelai wanita<br />Jinggotan RT
+                        05 RW 02
+                    </p>
+                    <a
+                        href="https://maps.app.goo.gl/tfFw4W5XUK5frGyHA?g_st=ac"
+                        class="maps reveal zoom"
+                        >Buka Google Maps</a
+                    >
+                </div>
+            </div>
+            <div class="section5">
+                <div class="section5-wrapper">
+                    <p class="wedding-gift reveal zoom">Wedding Gift</p>
+                    <p class="gift-text reveal fade-left">
+                        Kehadiran dan Doa restu Bapak/Ibu/Sdr/I merupakan
+                        karunia yang sangat berarti bagi kami. Namun jika
+                        memberi adalah tanda kasih dari anda, anda dapat
+                        memberikannya secara cashless melalui rekening dibawah
+                        ini. Terimakasih.
+                    </p>
+                    <div class="card reveal fade-right">
+                        <p class="bank">Bank BCA</p>
+                        <div class="chip">
+                            <img
+                                src="./assets/chip.png"
+                                alt=""
+                                class="chip-logo"
+                            />
+                            <div class="wrap-bank">
+                                <img
+                                    src="./assets/bca.svg"
+                                    alt="Bca Logo"
+                                    class="bank-logo"
+                                />
+                            </div>
+                        </div>
+                        <p class="norek">2470757330</p>
+                        <button class="salin" data-norek="2470757330">
+                            Salin Rekening
+                        </button>
+                        <p class="atas-nama">a.n Oktavina Ismi Fatmajati</p>
+                    </div>
+                    <div class="card reveal fade-left">
+                        <p class="bank">Seabank</p>
+                        <div class="chip">
+                            <img
+                                src="./assets/chip.png"
+                                alt=""
+                                class="chip-logo"
+                            />
+                            <div class="wrap-bank">
+                                <img
+                                    src="./assets/seabank.svg"
+                                    alt="Seabank Logo"
+                                    class="bank-logo"
+                                />
+                            </div>
+                        </div>
+                        <p class="norek">901275545697</p>
+                        <button class="salin" data-norek="901275545697">
+                            Salin Rekening
+                        </button>
+                        <p class="atas-nama">a.n Oktavina Ismi Fatmajati</p>
+                    </div>
+                </div>
+            </div>
         </div>
+
         <script>
             document.addEventListener("DOMContentLoaded", function () {
                 const reveals = document.querySelectorAll(".reveal");
@@ -194,32 +216,18 @@
             });
 
             const audio = document.getElementById("bg-music");
-    audio.loop = true;
+const btn = document.getElementById("openInvitation");
 
-    // Reset audio setiap kali halaman load
-    window.addEventListener("load", () => {
-        audio.pause();
-        audio.currentTime = 0;
-    });
 
-    // Gesture untuk mulai
-    function startAudio() {
-        audio.currentTime = 0;  // mulai dari awal
-        audio.play()
-            .then(() => {
-                console.log("Audio started");
-            })
-            .catch(err => {
-                console.warn("Audio blocked:", err);
-            });
-        
-        window.removeEventListener("click", startAudio);
-        window.removeEventListener("touchstart", startAudio);
-    }
+btn.addEventListener("click", () => {
+audio.currentTime = 0;
+audio.play().catch(err => console.log(err));
 
-    // Gesture VALID
-    window.addEventListener("click", startAudio);
-    window.addEventListener("touchstart", startAudio);
+
+// setelah klik, kamu bisa tambahkan aksi lain misalnya scroll atau hide hero
+document.getElementById("intro-screen").style.display = "none";
+document.getElementById("main-content").style.display = "block";
+});
         </script>
     </body>
 </html>

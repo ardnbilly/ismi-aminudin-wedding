@@ -13,6 +13,65 @@
         url("./fonts/CitadelScriptStd.otf") format("svg");
 }
 
+#main-content {
+    display: none;
+}
+
+.hero-intro {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 20px;
+    background-image: url(./assets/bg-hero-section.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    /* menjaga rasio background tetap proporsional */
+    aspect-ratio: 9 / 16;
+    width: 100%;
+    overflow: hidden;
+}
+.hero-intro .intro-heading {
+    font-family: "Playfair Display", serif;
+    font-size: 28px;
+    margin: 0;
+    line-height: 1.3em;
+    color: #2e354e;
+}
+.hero-intro .intro-names {
+    font-family: Citadel;
+    font-size: 90px;
+    margin: 10px 0;
+    color: #2e354e;
+}
+.hero-intro .intro-date {
+    font-family: "Playfair Display", serif;
+    font-size: 18px;
+    margin-top: 5px;
+    color: #2e354e;
+}
+.btn-open-invite {
+    margin-top: 30px;
+    background: #2e354e;
+    border: none;
+    padding: 14px 26px;
+    color: white;
+    font-size: 18px;
+    border-radius: 10px;
+    cursor: pointer;
+    font-weight: 600;
+    transition: 0.25s;
+}
+.btn-open-invite:hover {
+    opacity: 0.8;
+}
+iframe,
+audio {
+    display: none;
+}
+
 .hero-section .name {
     font-family: Citadel;
     font-size: 70px;
